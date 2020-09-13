@@ -38,7 +38,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     expect(page).to have_content("10")
     expect(page).to have_content("50")
   end
-=end 
+=end
 
   it "on log in, successfully adds a session hash" do
     create_standard_user
