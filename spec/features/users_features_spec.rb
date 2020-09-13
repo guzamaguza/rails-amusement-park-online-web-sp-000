@@ -65,14 +65,14 @@ describe 'Feature Test: User Signup', :type => :feature do
     expect(page).to have_content("ADMIN")
   end
 
-=begin
+
   it "on sign up for admin, successfully adds a session hash" do
     visit '/users/new'
     # admin_signup method is defined in login_helper.rb
     admin_signup
     expect(page.get_rack_session_key('user_id')).to_not be_nil
   end
-=end
+
 
   it 'successfully logs in as admin' do
     create_standard_and_admin_user
@@ -85,6 +85,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     expect(page).to have_content("ADMIN")
   end
 
+=begin
   it "on log in, successfully adds a session hash to admins" do
     create_standard_and_admin_user
     visit '/signin'
@@ -92,6 +93,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     admin_login
     expect(page.get_rack_session_key('user_id')).to_not be_nil
   end
+=end
 
 end
 
